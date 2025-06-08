@@ -5,7 +5,7 @@ use bellpepper_core::{
   num::AllocatedNum,
   ConstraintSystem, LinearCombination, SynthesisError,
 };
-use ark_ff::{Field, PrimeField, PrimeFieldBits};
+use ark_ff::{Field, PrimeField, BigInteger};
 use num_bigint::BigInt;
 
 use super::nonnative::bignat::{nat_to_limbs, BigNat};
@@ -18,7 +18,7 @@ pub fn le_bits_to_num<Scalar, CS>(
   bits: &[AllocatedBit],
 ) -> Result<AllocatedNum<Scalar>, SynthesisError>
 where
-  Scalar: PrimeField + PrimeFieldBits,
+  Scalar: PrimeField,
   CS: ConstraintSystem<Scalar>,
 {
   // We loop over the input bits and construct the constraint
@@ -65,7 +65,8 @@ pub fn alloc_scalar_as_base<E, CS>(
   input: Option<E::Scalar>,
 ) -> Result<AllocatedNum<E::Base>, SynthesisError>
 where
-  E: Engine<Scalar: PrimeFieldBits>,
+  E: Engine,
+  E::Scalar: PrimeField,
   CS: ConstraintSystem<<E as Engine>::Base>,
 {
   AllocatedNum::alloc(cs.namespace(|| "allocate scalar as base"), || {
@@ -76,14 +77,14 @@ where
 
 /// interpret scalar as base
 pub fn scalar_as_base<E: Engine>(input: E::Scalar) -> E::Base {
-  let input_bits = input.to_le_bits();
+  let bits = input.into_repr().to_bits_le();;
   let mut mult = E::Base::ONE;
   let mut val = E::Base::ZERO;
-  for bit in input_bits {
+  for bit in bits.into_iter().take(E::Scalar::MODULUS_BIT_SIZE as usize) {
     if bit {
       val += mult;
     }
-    mult = mult + mult;
+    mult += mult;
   }
   val
 }
