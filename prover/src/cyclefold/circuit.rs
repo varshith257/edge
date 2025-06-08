@@ -5,7 +5,7 @@ use bellpepper_core::{
   boolean::{AllocatedBit, Boolean},
   ConstraintSystem, SynthesisError,
 };
-use ff::Field;
+use ark_ff::Field;
 use neptune::{circuit2::poseidon_hash_allocated, poseidon::PoseidonConstants};
 
 use crate::{
@@ -147,7 +147,7 @@ impl<E: Engine> CycleFoldCircuit<E> {
 #[cfg(test)]
 mod tests {
   use expect_test::{expect, Expect};
-  use ff::{Field, PrimeField, PrimeFieldBits};
+  use ark_ff::{Field, PrimeField, PrimeFieldBits};
   use neptune::Poseidon;
   use rand_core::OsRng;
 

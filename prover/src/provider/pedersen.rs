@@ -6,7 +6,7 @@ use core::{
 };
 use std::io::Cursor;
 
-use ff::Field;
+use ark_ff::Field;
 use group::{
   prime::{PrimeCurve, PrimeCurveAffine},
   Curve, Group, GroupEncoding,

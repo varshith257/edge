@@ -7,7 +7,7 @@ use std::{
   ops::{AddAssign, Index, IndexMut, MulAssign, SubAssign},
 };
 
-use ff::PrimeField;
+use ark_ff::PrimeField;
 use rayon::prelude::{IntoParallelIterator, IntoParallelRefMutIterator, ParallelIterator};
 use ref_cast::RefCast;
 use serde::{Deserialize, Serialize};

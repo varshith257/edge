@@ -1,4 +1,4 @@
-use ff::Field;
+use ark_ff::Field;
 use itertools::Itertools as _;
 use rayon::prelude::*;
 use serde::{Deserialize, Serialize};

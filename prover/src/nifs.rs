@@ -175,7 +175,7 @@ impl<E: Engine> NIFS<E> {
 #[cfg(test)]
 mod tests {
   use ::bellpepper_core::{num::AllocatedNum, ConstraintSystem, SynthesisError};
-  use ff::{Field, PrimeField};
+  use ark_ff::{Field, PrimeField};
   use rand::rngs::OsRng;
 
   use super::*;

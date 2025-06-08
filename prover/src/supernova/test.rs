@@ -3,7 +3,7 @@ use std::fmt::Write;
 
 use bellpepper_core::{num::AllocatedNum, ConstraintSystem, SynthesisError};
 use expect_test::{expect, Expect};
-use ff::{Field, PrimeField};
+use ark_ff::{Field, PrimeField};
 use tap::TapOptional;
 
 use super::{utils::get_selector_vec_from_index, *};

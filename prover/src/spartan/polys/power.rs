@@ -2,7 +2,7 @@
 
 use std::iter::successors;
 
-use ff::PrimeField;
+use ark_ff::PrimeField;
 
 use crate::spartan::polys::eq::EqPolynomial;
 

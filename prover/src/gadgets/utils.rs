@@ -5,7 +5,7 @@ use bellpepper_core::{
   num::AllocatedNum,
   ConstraintSystem, LinearCombination, SynthesisError,
 };
-use ff::{Field, PrimeField, PrimeFieldBits};
+use ark_ff::{Field, PrimeField, PrimeFieldBits};
 use num_bigint::BigInt;
 
 use super::nonnative::bignat::{nat_to_limbs, BigNat};

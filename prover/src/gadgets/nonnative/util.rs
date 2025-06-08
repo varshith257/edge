@@ -7,7 +7,7 @@ use bellpepper_core::{
   num::AllocatedNum, ConstraintSystem, LinearCombination, SynthesisError, Variable,
 };
 use byteorder::WriteBytesExt;
-use ff::PrimeField;
+use ark_ff::PrimeField;
 use num_bigint::{BigInt, Sign};
 
 use super::{BitAccess, OptionExt};
@@ -221,7 +221,7 @@ pub fn nat_to_f<Scalar: PrimeField>(n: &BigInt) -> Option<Scalar> {
 #[cfg(test)]
 mod tests {
   use bitvec::field::BitField as _;
-  use ff::PrimeFieldBits;
+  use ark_ff::PrimeFieldBits;
   use rand::SeedableRng;
   use rand_chacha::ChaCha20Rng;
 

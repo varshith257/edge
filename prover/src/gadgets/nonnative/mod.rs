@@ -2,7 +2,7 @@
 //! arithmetic Code in this module is adapted from [bellman-bignat](https://github.com/alex-ozdemir/bellman-bignat), which is licenced under MIT
 
 use bellpepper_core::SynthesisError;
-use ff::PrimeField;
+use ark_ff::PrimeField;
 
 trait OptionExt<T> {
   fn grab(&self) -> Result<&T, SynthesisError>;

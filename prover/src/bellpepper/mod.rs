@@ -10,7 +10,7 @@ pub mod test_shape_cs;
 #[cfg(test)]
 mod tests {
   use bellpepper_core::{num::AllocatedNum, ConstraintSystem};
-  use ff::PrimeField;
+  use ark_ff::PrimeField;
 
   use crate::{
     bellpepper::{

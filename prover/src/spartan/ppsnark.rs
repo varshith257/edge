@@ -8,7 +8,7 @@
 use core::cmp::max;
 use std::sync::Arc;
 
-use ff::Field;
+use ark_ff::Field;
 use itertools::Itertools as _;
 use once_cell::sync::OnceCell;
 use rayon::prelude::*;
@@ -1014,7 +1014,7 @@ impl<E: Engine, EE: EvaluationEngineTrait<E>> RelaxedR1CSSNARKTrait<E> for Relax
 
 // #[cfg(test)]
 // mod tests {
-//     use ff::Field;
+//     use ark_ff::Field;
 //     use pasta_curves::Fq as Scalar;
 
 //     use super::*;

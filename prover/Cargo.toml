@@ -17,7 +17,7 @@ bitvec           ={ workspace=true }
 byteorder        ={ workspace=true }
 cfg-if           ={ workspace=true }
 digest           ={ workspace=true }
-ff               ={ workspace=true }
+ark-ff               ={ workspace=true }
 generic-array    ={ workspace=true }
 group            ={ workspace=true }
 grumpkin-msm     ={ workspace=true }

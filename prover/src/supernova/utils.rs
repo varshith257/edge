@@ -3,7 +3,7 @@ use bellpepper_core::{
   num::AllocatedNum,
   ConstraintSystem, LinearCombination, SynthesisError,
 };
-use ff::PrimeField;
+use ark_ff::PrimeField;
 use itertools::Itertools as _;
 
 use crate::{

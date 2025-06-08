@@ -10,7 +10,7 @@ bitvec           ="1.0"
 byteorder        ="1.4.3"
 cfg-if           ="1.0.0"
 digest           ="0.10"
-ff               ={ version="0.13.0", features=["derive"] }
+ark-ff               = { version = "0.3.0",  features = ["derive", "bls12_381"] }
 generic-array    ="1.0.0"
 group            ="0.13.0"
 grumpkin-msm     ={ git="https://github.com/argumentcomputer/grumpkin-msm", branch="dev" }

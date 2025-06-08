@@ -3,7 +3,7 @@
 use std::{ops::Index, sync::Arc};
 
 use bellpepper_core::{ConstraintSystem, SynthesisError};
-use ff::Field;
+use ark_ff::Field;
 use itertools::Itertools as _;
 use once_cell::sync::OnceCell;
 use rayon::prelude::*;

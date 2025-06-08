@@ -3,7 +3,7 @@
 #![allow(non_snake_case)]
 
 use bellpepper_core::{Index, LinearCombination};
-use ff::PrimeField;
+use ark_ff::PrimeField;
 
 use super::{shape_cs::ShapeCS, solver::SatisfyingAssignment, test_shape_cs::TestShapeCS};
 use crate::{

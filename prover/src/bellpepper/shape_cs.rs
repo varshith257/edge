@@ -1,7 +1,7 @@
 //! Support for generating R1CS shape using bellpepper.
 
 use bellpepper_core::{ConstraintSystem, Index, LinearCombination, SynthesisError, Variable};
-use ff::PrimeField;
+use ark_ff::PrimeField;
 
 use crate::traits::Engine;
 

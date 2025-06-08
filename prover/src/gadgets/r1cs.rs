@@ -3,7 +3,7 @@ use bellpepper::gadgets::{
   boolean::Boolean, boolean_utils::conditionally_select, num::AllocatedNum, Assignment,
 };
 use bellpepper_core::{ConstraintSystem, SynthesisError};
-use ff::Field;
+use ark_ff::Field;
 use itertools::Itertools as _;
 
 use super::nonnative::{

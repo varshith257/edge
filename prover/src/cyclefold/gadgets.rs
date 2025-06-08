@@ -3,7 +3,7 @@
 
 use bellpepper::gadgets::Assignment;
 use bellpepper_core::{num::AllocatedNum, ConstraintSystem, SynthesisError};
-use ff::Field;
+use ark_ff::Field;
 use itertools::Itertools;
 
 use super::util::FoldingData;
@@ -212,7 +212,7 @@ pub mod emulated {
     num::AllocatedNum,
     ConstraintSystem, SynthesisError,
   };
-  use ff::Field;
+  use ark_ff::Field;
 
   use super::FoldingData;
   use crate::{

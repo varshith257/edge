@@ -1,7 +1,7 @@
 use std::{io, marker::PhantomData};
 
 use bincode::Options;
-use ff::PrimeField;
+use ark_ff::PrimeField;
 use serde::Serialize;
 use sha3::{Digest, Sha3_256};
 
@@ -69,7 +69,7 @@ impl<'a, F: PrimeField, T: Digestible> DigestComputer<'a, F, T> {
 
 #[cfg(test)]
 mod tests {
-  use ff::Field;
+  use ark_ff::Field;
   use once_cell::sync::OnceCell;
   use serde::{Deserialize, Serialize};
 

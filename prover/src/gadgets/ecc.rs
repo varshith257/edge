@@ -6,7 +6,7 @@ use bellpepper_core::{
   num::AllocatedNum,
   ConstraintSystem, SynthesisError,
 };
-use ff::{Field, PrimeField};
+use ark_ff::{Field, PrimeField};
 
 use crate::{
   gadgets::utils::{
@@ -737,7 +737,7 @@ impl<G: Group> AllocatedPointNonInfinity<G> {
 #[cfg(test)]
 mod tests {
   use expect_test::{expect, Expect};
-  use ff::{Field, PrimeFieldBits};
+  use ark_ff::{Field, PrimeFieldBits};
   use group::Curve;
   use halo2curves::CurveAffine;
   use rand::rngs::OsRng;

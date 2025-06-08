@@ -3,7 +3,7 @@
 use core::slice;
 use std::sync::Arc;
 
-use ff::Field;
+use ark_ff::Field;
 use itertools::{chain, Itertools as _};
 use once_cell::sync::*;
 use rayon::prelude::*;

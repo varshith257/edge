@@ -6,7 +6,7 @@
 
 use std::ops::{Add, Index};
 
-use ff::PrimeField;
+use ark_ff::PrimeField;
 use itertools::Itertools as _;
 use rand_core::{CryptoRng, RngCore};
 use rayon::prelude::{

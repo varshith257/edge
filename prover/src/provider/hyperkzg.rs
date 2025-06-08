@@ -15,7 +15,7 @@
 use core::marker::PhantomData;
 use std::sync::Arc;
 
-use ff::{Field, PrimeFieldBits};
+use ark_ff::{Field, PrimeFieldBits};
 use group::{prime::PrimeCurveAffine as _, Curve, Group as _};
 use itertools::Itertools as _;
 use pairing::{Engine, MillerLoopResult, MultiMillerLoop};

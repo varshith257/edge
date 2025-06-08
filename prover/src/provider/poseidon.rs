@@ -6,7 +6,7 @@ use bellpepper_core::{
   num::AllocatedNum,
   ConstraintSystem, SynthesisError,
 };
-use ff::{PrimeField, PrimeFieldBits};
+use ark_ff::{PrimeField, PrimeFieldBits};
 use generic_array::typenum::U24;
 use neptune::{
   circuit2::Elt,
@@ -172,7 +172,7 @@ where Scalar: PrimeField + PrimeFieldBits + Serialize + for<'de> Deserialize<'de
 
 #[cfg(test)]
 mod tests {
-  use ff::Field;
+  use ark_ff::Field;
   use rand::rngs::OsRng;
 
   use super::*;

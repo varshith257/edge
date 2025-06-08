@@ -11,7 +11,7 @@ use bellpepper_core::{
   num::AllocatedNum,
   ConstraintSystem, SynthesisError,
 };
-use ff::Field;
+use ark_ff::Field;
 use serde::{Deserialize, Serialize};
 
 use crate::{
