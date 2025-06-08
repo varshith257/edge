@@ -15,7 +15,7 @@
 use core::marker::PhantomData;
 use std::sync::Arc;
 
-use ff::{Field, PrimeFieldBits};
+use ark_ff::Field;
 use group::{prime::PrimeCurveAffine as _, Curve, Group as _};
 use itertools::Itertools as _;
 use pairing::{Engine, MillerLoopResult, MultiMillerLoop};
@@ -79,7 +79,7 @@ where
   E::G1Affine: Serialize + DeserializeOwned,
   E::G1Affine: TranscriptReprTrait<E::G1>, // TODO: this bound on DlogGroup is really unusable!
   E::G2Affine: Serialize + DeserializeOwned,
-  E::Fr: PrimeFieldBits + TranscriptReprTrait<E::G1>,
+  E::Fr: TranscriptReprTrait<E::G1>,
   <E::G1 as Group>::Base: TranscriptReprTrait<E::G1>,
 {
   fn compute_challenge(
@@ -184,7 +184,6 @@ where
   <E::G1 as Group>::Base: TranscriptReprTrait<E::G1>, /* Note: due to the move of the bound
                                                        * TranscriptReprTrait<G> on G::Base
                                                        * from Group to Engine */
-  E::Fr: PrimeFieldBits, // TODO due to use of gen_srs_for_testing, make optional
   E::Fr: TranscriptReprTrait<E::G1>,
   E::G1Affine: TranscriptReprTrait<E::G1>,
 {

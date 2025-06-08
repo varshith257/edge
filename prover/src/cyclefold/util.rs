@@ -1,7 +1,7 @@
 //! This module defines some useful utilities for RO absorbing, and the Folding
 //! data used in the CycleFold folding scheme.
 
-use ff::Field;
+use ark_ff::Field;
 use serde::{Deserialize, Serialize};
 
 use crate::{

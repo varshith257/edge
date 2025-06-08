@@ -1,4 +1,4 @@
-use ff::PrimeField;
+use ark_ff::PrimeField;
 use group::Group;
 #[cfg(not(target_arch = "wasm32"))]
 use proptest::prelude::*;

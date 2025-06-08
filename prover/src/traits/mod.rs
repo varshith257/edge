@@ -3,7 +3,7 @@
 use core::fmt::Debug;
 
 use bellpepper_core::{boolean::AllocatedBit, num::AllocatedNum, ConstraintSystem, SynthesisError};
-use ff::{PrimeField, PrimeFieldBits};
+use ark_ff::{PrimeField, PrimeFieldBits};
 use num_bigint::BigInt;
 use serde::{Deserialize, Serialize};
 

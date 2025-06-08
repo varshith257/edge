@@ -8,7 +8,7 @@
 use core::slice;
 use std::{iter, sync::Arc};
 
-use ff::Field;
+use ark_ff::Field;
 use itertools::Itertools;
 use once_cell::sync::OnceCell;
 use rayon::prelude::*;

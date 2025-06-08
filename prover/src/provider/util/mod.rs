@@ -11,7 +11,7 @@ pub mod msm {
 }
 
 pub mod field {
-  use ff::{BatchInverter, Field};
+  use ark_ff::{BatchInverter, Field};
 
   use crate::errors::NovaError;
 
@@ -34,7 +34,7 @@ pub mod iterators {
     ops::{AddAssign, MulAssign},
   };
 
-  use ff::Field;
+  use ark_ff::Field;
   use rayon::iter::{IndexedParallelIterator, IntoParallelIterator, ParallelIterator};
   use rayon_scan::ScanParallelIterator;
 
@@ -100,7 +100,7 @@ pub mod test_utils {
   //! Contains utilities for testing and benchmarking.
   use std::sync::Arc;
 
-  use ff::Field;
+  use ark_ff::Field;
   use rand::rngs::StdRng;
   use rand_core::{CryptoRng, RngCore};
 

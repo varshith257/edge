@@ -6,7 +6,7 @@
 
 use std::sync::Arc;
 
-use ff::Field;
+use ark_ff::Field;
 use itertools::Itertools as _;
 use once_cell::sync::OnceCell;
 use rayon::prelude::*;

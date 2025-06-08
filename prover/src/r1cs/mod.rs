@@ -4,7 +4,7 @@ pub(crate) mod util;
 
 use core::cmp::max;
 
-use ff::Field;
+use ark_ff::Field;
 use once_cell::sync::OnceCell;
 use rand_core::{CryptoRng, RngCore};
 use rayon::prelude::*;
@@ -725,7 +725,7 @@ pub fn default_T<E: Engine>(num_cons: usize) -> Vec<E::Scalar> { Vec::with_capac
 
 #[cfg(test)]
 pub(crate) mod tests {
-  use ff::Field;
+  use ark_ff::Field;
   use rand_chacha::ChaCha20Rng;
   use rand_core::SeedableRng;
 

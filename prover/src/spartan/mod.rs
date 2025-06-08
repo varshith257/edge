@@ -19,7 +19,7 @@ pub mod ppsnark;
 pub mod snark;
 mod sumcheck;
 
-use ff::Field;
+use ark_ff::Field;
 use itertools::Itertools as _;
 use rayon::{iter::IntoParallelRefIterator, prelude::*};
 use rayon_scan::ScanParallelIterator as _;

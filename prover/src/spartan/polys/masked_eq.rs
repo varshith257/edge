@@ -1,7 +1,7 @@
 //! `MaskedEqPolynomial`: Represents the `eq` polynomial over n variables, where
 //! the first 2^m entries are 0.
 
-use ff::PrimeField;
+use ark_ff::PrimeField;
 use itertools::zip_eq;
 
 use crate::spartan::polys::eq::EqPolynomial;

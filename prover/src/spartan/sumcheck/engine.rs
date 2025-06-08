@@ -1,4 +1,4 @@
-use ff::Field;
+use ark_ff::Field;
 use rayon::prelude::*;
 
 use crate::{

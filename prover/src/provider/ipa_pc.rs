@@ -3,7 +3,7 @@
 use core::iter;
 use std::{marker::PhantomData, sync::Arc};
 
-use ff::Field;
+use ark_ff::Field;
 use rayon::prelude::*;
 use serde::{Deserialize, Serialize};
 

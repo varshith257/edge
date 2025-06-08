@@ -274,7 +274,7 @@ mod test {
   use std::marker::PhantomData;
 
   use bellpepper_core::{num::AllocatedNum, ConstraintSystem, SynthesisError};
-  use ff::Field;
+  use ark_ff::Field;
 
   use super::*;
   use crate::{

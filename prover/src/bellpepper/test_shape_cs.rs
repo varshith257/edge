@@ -9,7 +9,7 @@ use std::{
 };
 
 use bellpepper_core::{ConstraintSystem, Index, LinearCombination, SynthesisError, Variable};
-use ff::{Field, PrimeField};
+use ark_ff::{Field, PrimeField};
 
 use crate::traits::Engine;
 

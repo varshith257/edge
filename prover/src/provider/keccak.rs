@@ -86,7 +86,7 @@ impl<E: Engine> TranscriptEngineTrait<E> for Keccak256Transcript<E> {
 
 #[cfg(test)]
 mod tests {
-  use ff::PrimeField;
+  use ark_ff::PrimeField;
   use rand::Rng;
   use sha3::{Digest, Keccak256};
 

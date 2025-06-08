@@ -2,7 +2,7 @@
 
 use std::{io::Cursor, marker::PhantomData, sync::Arc};
 
-use ff::{Field, PrimeField, PrimeFieldBits};
+use ark_ff::{Field, PrimeField, PrimeFieldBits};
 use group::{prime::PrimeCurveAffine, Curve, Group as _};
 use halo2curves::serde::SerdeObject;
 use pairing::Engine;

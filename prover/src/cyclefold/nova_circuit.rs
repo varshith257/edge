@@ -4,7 +4,7 @@ use bellpepper::gadgets::{
   boolean::Boolean, boolean_utils::conditionally_select_slice, num::AllocatedNum, Assignment,
 };
 use bellpepper_core::{boolean::AllocatedBit, ConstraintSystem, SynthesisError};
-use ff::Field;
+use ark_ff::Field;
 use serde::{Deserialize, Serialize};
 
 use super::{

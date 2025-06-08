@@ -3,7 +3,7 @@
 use std::io::Read;
 
 use digest::{ExtendableOutput, Update};
-use ff::{FromUniformBytes, PrimeField};
+use ark_ff::{FromUniformBytes, PrimeField};
 use group::{cofactor::CofactorCurveAffine, Curve, Group as AnotherGroup};
 #[cfg(any(target_arch = "x86_64", target_arch = "aarch64"))]
 use grumpkin_msm::{bn256 as bn256_msm, grumpkin as grumpkin_msm};
@@ -70,7 +70,7 @@ impl_traits!(
 
 #[cfg(test)]
 mod tests {
-  use ff::Field;
+  use ark_ff::Field;
   use rand::thread_rng;
 
   use crate::provider::{

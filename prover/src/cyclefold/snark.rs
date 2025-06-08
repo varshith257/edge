@@ -2,7 +2,7 @@
 //! `prove_step`, and `verify` methods.
 
 use bellpepper_core::{ConstraintSystem, SynthesisError};
-use ff::PrimeFieldBits;
+use ark_ff::PrimeFieldBits;
 use once_cell::sync::OnceCell;
 use serde::{Deserialize, Serialize};
 

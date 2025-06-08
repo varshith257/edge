@@ -6,7 +6,7 @@
 /// The multiplication is optimized through a windowed method, where scalars are
 /// broken into fixed-size windows, pre-computation tables are generated, and
 /// results are efficiently combined.
-use ff::{PrimeField, PrimeFieldBits};
+use ark_ff::{PrimeField, PrimeFieldBits};
 use group::{prime::PrimeCurve, Curve};
 use rayon::prelude::*;
 

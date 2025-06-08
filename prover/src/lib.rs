@@ -25,7 +25,7 @@ use bellpepper_core::{ConstraintSystem, SynthesisError};
 use circuit::{NovaAugmentedCircuit, NovaAugmentedCircuitInputs, NovaAugmentedCircuitParams};
 use constants::{BN_LIMB_WIDTH, BN_N_LIMBS, NUM_FE_WITHOUT_IO_FOR_CRHF, NUM_HASH_BITS};
 use errors::NovaError;
-use ff::Field;
+use ark_ff::Field;
 use gadgets::scalar_as_base;
 use nifs::NIFS;
 use once_cell::sync::OnceCell;
@@ -904,7 +904,7 @@ type CE<E> = <E as Engine>::CE;
 
 //     use ::bellpepper_core::{num::AllocatedNum, ConstraintSystem,
 // SynthesisError};     use expect_test::{expect, Expect};
-//     use ff::PrimeField;
+//     use ark_ff::PrimeField;
 //     use halo2curves::bn256::Bn256;
 //     use traits::circuit::TrivialCircuit;
 

@@ -5,7 +5,7 @@ use std::{
 };
 
 use bellpepper_core::{ConstraintSystem, LinearCombination, SynthesisError};
-use ff::PrimeField;
+use ark_ff::PrimeField;
 use itertools::Itertools as _;
 use num_bigint::BigInt;
 use num_traits::cast::ToPrimitive;

@@ -6,7 +6,7 @@ use bellpepper_core::{
   num::AllocatedNum,
   ConstraintSystem, SynthesisError,
 };
-use ff::{PrimeField, PrimeFieldBits};
+use ark_ff::{PrimeField, BigInteger};
 use generic_array::typenum::U24;
 use neptune::{
   circuit2::Elt,
@@ -46,7 +46,7 @@ where
 
 impl<Base, Scalar> ROTrait<Base, Scalar> for PoseidonRO<Base, Scalar>
 where
-  Base: PrimeField + PrimeFieldBits + Serialize + for<'de> Deserialize<'de>,
+  Base: PrimeField + Serialize + for<'de> Deserialize<'de>,
   Scalar: PrimeField,
 {
   type CircuitRO = PoseidonROCircuit<Base>;
@@ -80,10 +80,14 @@ where
     sponge.finish(acc).unwrap();
 
     // Only return `num_bits`
-    let bits = hash[0].to_le_bits();
+    let mut bits = hash[0]
+      .into_repr() 
+      .to_bits_le(); 
+    bits.truncate(num_bits);
+
     let mut res = Scalar::ZERO;
     let mut coeff = Scalar::ONE;
-    for bit in bits[..num_bits].into_iter() {
+    for bit in bits {
       if *bit {
         res += coeff;
       }
@@ -104,7 +108,7 @@ pub struct PoseidonROCircuit<Scalar: PrimeField> {
 }
 
 impl<Scalar> ROCircuitTrait<Scalar> for PoseidonROCircuit<Scalar>
-where Scalar: PrimeField + PrimeFieldBits + Serialize + for<'de> Deserialize<'de>
+where Scalar: PrimeField + Serialize + for<'de> Deserialize<'de>
 {
   type Constants = PoseidonConstantsCircuit<Scalar>;
   type NativeRO<T: PrimeField> = PoseidonRO<Scalar, T>;
@@ -172,7 +176,7 @@ where Scalar: PrimeField + PrimeFieldBits + Serialize + for<'de> Deserialize<'de
 
 #[cfg(test)]
 mod tests {
-  use ff::Field;
+  use ark_ff::Field;
   use rand::rngs::OsRng;
 
   use super::*;

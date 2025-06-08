@@ -1,7 +1,7 @@
 //! `EqPolynomial`: Represents multilinear extension of equality polynomials,
 //! evaluated based on binary input values.
 
-use ff::PrimeField;
+use ark_ff::PrimeField;
 use rayon::prelude::{IndexedParallelIterator, IntoParallelRefMutIterator, ParallelIterator};
 
 /// Represents the multilinear extension polynomial (MLE) of the equality
